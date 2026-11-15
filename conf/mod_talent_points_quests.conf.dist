@@ -1,0 +1,46 @@
+[worldserver]
+
+###################################################################################################
+#    mod-talent-points-quests
+###################################################################################################
+#
+#    Talent points are earned by completing quests instead of by levelling. Points are split in
+#    one tier per expansion. A quest point fills the highest tier the quest belongs to first, then
+#    spills into the tiers below.
+#
+#    TalentPointsQuests.Enable
+#        Description: Enable the quest-based talent points. When disabled, the standard
+#                     level-based talent points apply.
+#        Default:     1 - (Enabled)
+#                     0 - (Disabled)
+
+TalentPointsQuests.Enable = 1
+
+#    TalentPointsQuests.PointsAhead
+#        Description: How many points a player can have in a tier above the standard
+#                     level-based amount for their level. Never above the tier maximum.
+#        Default:     5
+
+TalentPointsQuests.PointsAhead = 5
+
+#    TalentPointsQuests.Classic.LastLevel
+#    TalentPointsQuests.TBC.LastLevel
+#    TalentPointsQuests.WotLK.LastLevel
+#        Description: Last character level of each tier. The Classic tier starts at level 10,
+#                     each next tier starts right after the previous one. A tier holds one point
+#                     per level, so the defaults give 51 + 10 + 10 points.
+#        Default:     60, 70, 80
+
+TalentPointsQuests.Classic.LastLevel = 60
+TalentPointsQuests.TBC.LastLevel = 70
+TalentPointsQuests.WotLK.LastLevel = 80
+
+#    TalentPointsQuests.TBC.QuestMinLevel
+#    TalentPointsQuests.WotLK.QuestMinLevel
+#        Description: Minimum quest level to count for the tier, on top of the quest zone
+#                     belonging to that expansion. Keeps the Blood Elf and Draenei starting
+#                     zones, which are on the Outland map, in the Classic tier.
+#        Default:     58, 68
+
+TalentPointsQuests.TBC.QuestMinLevel = 58
+TalentPointsQuests.WotLK.QuestMinLevel = 68
